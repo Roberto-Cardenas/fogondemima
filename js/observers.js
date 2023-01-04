@@ -9,7 +9,7 @@ heroSectionOptions = {
 };
 
 sectionOptions = {
-  rootMargin: "-1% 0px -99% 0px"
+  rootMargin: "-18% 0px -82% 0px"
 };
 
 // Intersection Observers
