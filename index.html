@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"> 
   <title>El Fogón de Mi Ma. María - Desayunos y Antojitos Mexicanos ubicado en Rosarito, Baja California.</title>
   <script src="js/observers.js" defer></script>
+  <script src="js/nav.js" defer></script>
 </head>
 <body>
   <header class="flex">
@@ -19,11 +20,12 @@
       <img src="images/fogon-logo.png" alt="El Fogón de Mi Ma. María">
     </a>
     <nav>
-      <ul class="primary-navigation flex">
+      <ul id="primary-navigation" class="primary-navigation flex" data-visible="false">
         <li class="active inicio-tab"><a href="#hero">INICIO</a></li>
         <li class="menu-tab"><a href="#menu">MENÚ</a></li>
       </ul>
     </nav>
+    <button class="menu-btn" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Phone Menu</span></button>
   </header>
   <section id="hero" class="hero" data-section="inicio-tab">
     <div class="hero-container flow-content">
@@ -40,7 +42,6 @@
     <div class="footer-container flow-content">
       <div class="contact-container flow-content">
         <h3>Contacto</h3>
-        <p data-icon="email">elfogondemimamaria@gmail.com</p>
         <p data-icon="telefono">(000) 000-0000</p>
       </div>
       <div class="location-container flow-content">

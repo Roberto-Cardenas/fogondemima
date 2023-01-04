@@ -49,7 +49,7 @@ body {
 }
 
 section {
-  padding: 1rem;
+  padding: 1em;
 }
 
 .flex {
@@ -74,22 +74,22 @@ section {
 
 @media (min-width: 40em) {
   section {
-    padding: 2rem;
+    padding: 2em;
   }
 }
 @media (min-width: 60em) {
   section {
-    padding: 4rem;
+    padding: 4em;
   }
 }
 /* Header */
 header {
   position: fixed;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
+  padding: 0.75em 1em;
   background: var(--clr-light);
   font-family: var(--ff-accent);
   line-height: 1;
@@ -114,7 +114,7 @@ header.nav-scrolled::after {
 }
 .logo img {
   display: block;
-  max-width: 8rem;
+  max-width: 128px;
 }
 
 .primary-navigation {
@@ -138,9 +138,48 @@ header.nav-scrolled::after {
   width: 100%;
 }
 
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 40em) {
+  .primary-navigation {
+    --gap: 0;
+    position: fixed;
+    inset: 0 0 0 30%;
+    z-index: 1000;
+    flex-direction: column;
+    background: var(--clr-light);
+    padding-block: 5rem;
+    transform: translateX(100%);
+    transition: transform 250ms ease;
+    border-left: 0.25rem solid var(--clr-accent);
+  }
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0);
+  }
+  .primary-navigation li a {
+    display: inline-block;
+    padding: 0.5em 2em;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 9999;
+    background: url("../icons/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    width: 32px;
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+  .menu-btn[aria-expanded=true] {
+    background-image: url("../icons/close-menu.svg");
+  }
+}
 @media (min-width: 40em) {
   header {
-    padding: 1rem 2rem;
+    padding: 1em 2em;
   }
   .primary-navigation {
     --gap: 2rem;
@@ -148,7 +187,7 @@ header.nav-scrolled::after {
 }
 @media (min-width: 60em) {
   header {
-    padding-inline: 4rem;
+    padding-inline: 4em;
   }
 }
 /* Hero */
@@ -201,7 +240,7 @@ header.nav-scrolled::after {
 footer {
   display: grid;
   gap: 2rem;
-  padding: 1rem;
+  padding: 1em;
 }
 footer img {
   width: 100%;
@@ -220,10 +259,14 @@ footer p {
   margin-left: 2.5rem;
   font-size: clamp(0.875rem, 0.125rem + 2vw, 1rem);
 }
+footer p[data-icon=ubicacion] {
+  max-width: 45ch;
+}
 footer p::before {
   position: absolute;
   top: -0.125rem;
   left: -2.5rem;
+  font-size: 1rem;
 }
 footer p[data-icon=email]::before {
   content: url(../icons/email.svg);
@@ -240,12 +283,12 @@ footer p[data-icon=horarios]::before {
 
 @media (min-width: 40em) {
   footer {
-    padding: 2rem;
+    padding: 2em;
   }
 }
 @media (min-width: 60em) {
   footer {
     grid-template-columns: 1fr 1fr;
-    padding: 2rem 4rem;
+    padding: 2em 4em;
   }
 }/*# sourceMappingURL=style.css.map */
