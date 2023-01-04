@@ -5,7 +5,7 @@ const menuSection = document.querySelector(".menu");
 
 // Options
 heroSectionOptions = {
-  threshold: "0.95"
+  threshold: "0.90"
 };
 
 sectionOptions = {
