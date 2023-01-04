@@ -55,6 +55,7 @@ body {
   color: var(--clr-dark);
   font-family: var(--ff-main);
   line-height: 1.6;
+  background: #0F0704;
 }
 
 section {
@@ -263,8 +264,8 @@ header {
 ////////////////
 
 .menu {
-  margin-top: -10vw;
-  padding-top: 10vw;
+  // margin-top: -10vw;
+  // padding-top: 10vw;
 
   background: url("../images/menu-bg.jpg");
   background-size: cover;
@@ -293,6 +294,7 @@ footer {
   display: grid;
   gap: 2rem;
   padding: 1em;
+  background: var(--clr-light);
 
   img {
     width: 100%;
