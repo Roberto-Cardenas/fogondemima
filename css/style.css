@@ -253,31 +253,31 @@ footer h3 {
   font-weight: var(--fw-bold);
   font-size: clamp(1.5rem, 0.125rem + 4vw, 2rem);
 }
-footer p {
+footer [data-icon] {
   position: relative;
   font-weight: var(--fw-medium);
   margin-left: 2.5rem;
   font-size: clamp(0.875rem, 0.125rem + 2vw, 1rem);
 }
-footer p[data-icon=ubicacion] {
+footer [data-icon][data-icon=ubicacion] {
   max-width: 45ch;
 }
-footer p::before {
+footer [data-icon]::before {
   position: absolute;
   top: -0.125rem;
   left: -2.5rem;
   font-size: 1rem;
 }
-footer p[data-icon=email]::before {
+footer [data-icon][data-icon=email]::before {
   content: url(../icons/email.svg);
 }
-footer p[data-icon=telefono]::before {
+footer [data-icon][data-icon=telefono]::before {
   content: url(../icons/telefono.svg);
 }
-footer p[data-icon=ubicacion]::before {
+footer [data-icon][data-icon=ubicacion]::before {
   content: url(../icons/ubicacion.svg);
 }
-footer p[data-icon=horarios]::before {
+footer [data-icon][data-icon=horarios]::before {
   content: url(../icons/horarios.svg);
 }
 
